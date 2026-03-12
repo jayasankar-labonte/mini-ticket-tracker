@@ -86,7 +86,7 @@ const TicketList = () => {
               <tbody>
                   {tickets.map((ticket, index) => (
                   <tr key={ticket.id}>
-                      <td style={{ textAlign: "center", width:"50px" }}>{index + 1}</td>
+                      <td style={{ textAlign: "center", width:"50px" }}>{page * limit + index + 1}</td>
                       <td style={{ width:"100px"}}>TKT{ticket.id}</td>
                       <td onClick={() => navigate(`/view-ticket/${ticket.id}`)} className="text-primary" style={{ cursor: "pointer" }}>{ticket.title}</td>
                       <td>{ticket.description}</td>
